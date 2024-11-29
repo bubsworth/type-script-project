@@ -1,3 +1,4 @@
+//***BASIC TYPES***
 let userName = 'Max';
 
 // userName = 'Max';
@@ -6,6 +7,7 @@ userName = 'Max';
 let userAge = 34;
 let isValid = true;
 
+//***UNION TYPES***
 //string, number, boolean
 
 let userID: string | number = 'abc1'
@@ -13,6 +15,7 @@ userID = 123;
 
 // userID = true;
 
+//***OBJECT TYPES***
 // let user: object;
 
 let user: {
@@ -32,3 +35,12 @@ user = {
 }
 
 // user = {};
+
+//***ARRAY TYPES***
+// let hobbies: Array<string>;
+let hobbies: string[]; // number[], boolean[]
+
+// {name: string; age: number}[]
+
+hobbies = ['Sports', 'Cokking', 'REading']
+// hobbies = [1, 2, 3]
