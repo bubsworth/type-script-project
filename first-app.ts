@@ -1,8 +1,8 @@
 //***BASIC TYPES***//
-let userName = 'Max';
+let userName = "Max";
 
 // userName = 'Max';
-userName = 'Max';
+userName = "Max";
 
 let userAge = 34;
 let isValid = true;
@@ -10,8 +10,8 @@ let isValid = true;
 //***UNION TYPES***//
 //string, number, boolean
 
-let userID: string | number = 'abc1'
-userID = 123; 
+let userID: string | number = "abc1";
+userID = 123;
 
 // userID = true;
 
@@ -28,11 +28,11 @@ let user: {
 //user = 'Max';
 
 user = {
-  name: 'Max',
+  name: "Max",
   age: 34,
   isAdmin: true,
-  id: 'abc' //123
-}
+  id: "abc", //123
+};
 
 // user = {};
 
@@ -42,11 +42,22 @@ let hobbies: string[]; // number[], boolean[]
 
 // {name: string; age: number}[]
 
-hobbies = ['Sports', 'Cokking', 'REading']
+hobbies = ["Sports", "Cokking", "REading"];
 // hobbies = [1, 2, 3]
 
 //***FUNCTIONS WITH TYPES***//
-function add(a: number, b: number): void {
+function add(a: number, b: number) {
   const result = a + b;
-  console.log(result);
+  return result;
 }
+
+//***Defining Function Types***//
+function calculate(
+  a: number,
+  b: number,
+  calcFn: (a: number, b: number) => number,
+) {
+  calcFn(a, b);
+}
+
+calculate(2, 5, add);
