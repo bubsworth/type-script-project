@@ -10,20 +10,25 @@ let isValid = true;
 //***UNION TYPES***//
 //string, number, boolean
 
-let userID: string | number = "abc1";
+//another allias
+type StringOrNumb = string | number;
+
+let userID: StringOrNumb = "abc1";
 userID = 123;
 
 // userID = true;
 
 //***OBJECT TYPES***//
 // let user: object;
-
-let user: {
+//another allias
+type User = {
   name: string;
   age: number;
   isAdmin: boolean;
   id: string; //123 | 'abc' | true | false | null | undefined
 };
+
+let user: User;
 
 //user = 'Max';
 
@@ -51,12 +56,11 @@ function add(a: number, b: number) {
   return result;
 }
 
+//***type alliases***//
+type AddFn = (a: number, b: number) => number;
+
 //***Defining Function Types***//
-function calculate(
-  a: number,
-  b: number,
-  calcFn: (a: number, b: number) => number,
-) {
+function calculate(a: number, b: number, calcFn: AddFn) {
   calcFn(a, b);
 }
 
