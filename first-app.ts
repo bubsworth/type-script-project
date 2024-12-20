@@ -130,3 +130,12 @@ admin = {
   permissions: ["login"],
   userName: "Max",
 };
+
+///*** Being Specific With Literal Types ***//
+
+let role: "admin" | "user" | "editor";
+
+role = "admin";
+role = "user";
+role = "editor";
+// role = "abc";
