@@ -131,7 +131,9 @@ admin = {
   userName: "Max",
 };
 
-///*** Being Specific With Literal Types ***//
+///*** Specific Literal Types ***//
+
+type Role = "admin" | "user" | "editor";
 
 let role: "admin" | "user" | "editor";
 
@@ -139,3 +141,11 @@ role = "admin";
 role = "user";
 role = "editor";
 // role = "abc";
+
+///*** Guard Types ***//
+
+function performAction(action: string | number, role: Role) {
+  if (role === "admin" && typeof action === "string") {
+    // ...
+  }
+}
